@@ -14,8 +14,8 @@ export const Footer = () => {
             <div className="flex items-start gap-3">
               <MapPin className="text-primary mt-1 flex-shrink-0" size={20} />
               <div className="font-open-sans text-muted-foreground">
-                <p>Rua das Barbearias, 123</p>
-                <p>Centro, São Paulo - SP</p>
+                <p>Rua duque de caxias, 552</p>
+                <p>Centro, Dourados - MS</p>
                 <p>CEP: 01234-567</p>
               </div>
             </div>
