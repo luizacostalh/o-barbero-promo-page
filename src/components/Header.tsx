@@ -8,7 +8,7 @@ export const Header = () => {
           <img 
             src={barberoLogo}
             alt="O Barbero Logo" 
-            className="h-40 w-auto mx-auto mb-4 filter drop-shadow-lg" 
+            className="h-40 md:h-52 w-auto mx-auto mb-4 filter drop-shadow-lg" 
           />
         </div>
         <p className="font-open-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -18,3 +18,4 @@ export const Header = () => {
     </header>
   );
 };
+
