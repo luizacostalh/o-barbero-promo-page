@@ -23,10 +23,10 @@ export const Footer = () => {
             <div className="flex items-center gap-3">
               <Phone className="text-primary flex-shrink-0" size={20} />
               <a 
-                href="https://wa.me/5511999999999" 
+                href="https://wa.me/5567993504221" 
                 className="font-open-sans text-muted-foreground hover:text-primary transition-colors duration-300"
               >
-                (11) 99999-9999
+                (67) 99350-4221
               </a>
             </div>
           </div>
