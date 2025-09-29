@@ -2,7 +2,7 @@ import barberoLogo from "@/assets/barbero-logo.png";
 
 export const Header = () => {
   return (
-    <header className="bg-gradient-dark py-12 px-4">
+    <header className="bg-black py-12 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-6">
           <img 
@@ -18,4 +18,5 @@ export const Header = () => {
     </header>
   );
 };
+
 
