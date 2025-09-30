@@ -156,6 +156,31 @@ const Index = () => {
     ))}
   </div>
 </section>
+{/* Botão Fixo do WhatsApp */}
+      <a 
+        href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="fixed bottom-6 right-6 z-50 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+        aria-label="Fale conosco pelo WhatsApp"
+      >
+        {/* Ícone Simples do WhatsApp (SVG) */}
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="30" 
+          height="30" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="white" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          className="feather feather-message-circle"
+        >
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 13.9 13.9 0 0 1-2.9 3.8 11.16 11.16 0 0 1-3.8 2.9 8.38 8.38 0 0 1-3.8.9c-4.6 0-8.38-3.78-8.38-8.38s3.78-8.38 8.38-8.38 8.38 3.78 8.38 8.38z" />
+          <path d="M12 18l-1.4-1.4c-1.2 1-2.8 1.4-4.2 1.4-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6c0 1.4-.4 3-1.4 4.2L12 18z" />
+        </svg>
+      </a>
 
 
       <Footer />
