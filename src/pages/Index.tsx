@@ -15,8 +15,8 @@ const Index = () => {
       description: (
         <>
           Venha conhecer a O Barbero e aproveite seu corte de{" "}
-          <span className="bg-yellow-400 text-black px-1 rounded">R$40</span> por apenas{" "}
-          <span className="bg-yellow-400 text-black px-1 rounded">R$30</span>.
+          <span className="bg-yellow-400 text-black px-1 rounded">R$ 40</span> por apenas{" "}
+          <span className="bg-yellow-400 text-black px-1 rounded">R$ 30</span>.
         </>
       ),
       buttonText: "aproveitar",
@@ -29,7 +29,7 @@ const Index = () => {
           <span className="bg-yellow-400 text-black px-1 rounded">desconto</span> especial!
         </>
       ),
-      description: "Apresente seu crachá ou informe seu local de trabalho e pague apenas R$30.",
+      description: "Apresente seu crachá ou informe seu local de trabalho e pague apenas R$ 30.",
       buttonText: "Aproveitar",
     },
     {
@@ -39,23 +39,23 @@ const Index = () => {
           <span className="bg-yellow-400 text-black px-1 rounded">ganhe 12%</span> de desconto em cada corte!
         </>
       ),
-      description: "Indique um amigo e ambos pagam apenas R$35 no corte de R$40.",
+      description: "Indique um amigo e ambos pagam apenas R$ 35 no corte de R$ 40.",
       buttonText: "Indicar amigo",
     },
   ];
 
   const corteValues = [
-    { tipo: "Corte Degradê", preco: "R$40" },
-    { tipo: "Corte Social", preco: "R$35" },
-    { tipo: "Corte e Barba", preco: "R$70" },
-    { tipo: "Sobrancelha", preco: "R$10" },
+    { tipo: "Corte Degradê", preco: "R$ 40" },
+    { tipo: "Corte Social", preco: "R$ 35" },
+    { tipo: "Corte e Barba", preco: "R$ 70" },
+    { tipo: "Sobrancelha", preco: "R$ 10" },
   ];
 
   const planos = [
-    { nome: "Plano Corte", preco: "R$120/mês", beneficios: ["Corte ilimitado durante o mês"] },
-    { nome: "Plano Corte + Sobrancelha", preco: "R$150/mês", beneficios: ["Corte e sobrancelha ilimitados durante o mês"] },
-    { nome: "Plano Corte + Barba", preco: "R$200/mês", beneficios: ["Corte e barba ilimitados durante o mês"] },
-    { nome: "Plano Completo", preco: "R$220/mês", beneficios: ["Corte, barba e sobrancelha ilimitados durante o mês"] },
+    { nome: "Plano Corte", preco: "R$ 120/mês", beneficios: ["Corte ilimitado durante o mês"] },
+    { nome: "Plano Corte + Sobrancelha", preco: "R$ 150/mês", beneficios: ["Corte e sobrancelha ilimitados durante o mês"] },
+    { nome: "Plano Corte + Barba", preco: "R$ 200/mês", beneficios: ["Corte e barba ilimitados durante o mês"] },
+    { nome: "Plano Completo", preco: "R$ 220/mês", beneficios: ["Corte, barba e sobrancelha ilimitados durante o mês"] },
   ];
 
   useEffect(() => {

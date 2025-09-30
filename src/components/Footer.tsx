@@ -14,7 +14,7 @@ export const Footer = () => {
             <div className="flex items-start gap-3">
               <MapPin className="text-primary mt-1 flex-shrink-0" size={20} />
               <div className="font-open-sans text-muted-foreground">
-                <p>Rua duque de caxias, 552</p>
+                <p>Rua Duque de caxias, 552</p>
                 <p>Centro, Dourados - MS</p>
                 <p>CEP: 79831060</p>
               </div>
