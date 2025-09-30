@@ -44,3 +44,35 @@ export const PromoCard = ({ title, description, buttonText, variant = "first" }:
     </Card>
   );
 };
+
+// ------------------------------
+// Uso com os 3 cards ajustados
+// ------------------------------
+export const PromoCards = () => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <PromoCard
+        title="Primeira visita? ganhe 25% de desconto!"
+        description="Aproveite seu primeiro corte com desconto especial e descubra o cuidado que você merece."
+        buttonText="Aproveitar Oferta"
+        variant="first"
+      />
+
+      <PromoCard
+        title="Se você trabalha próximo a nossa barbearia, você tem desconto especial!"
+        description="Mostre seu crachá ou comprove o endereço e receba um desconto exclusivo para colaboradores da região."
+        buttonText="Resgatar Desconto"
+        variant="work"
+      />
+
+      <PromoCard
+        title="Indique um amigo e ganhe 12% de desconto em cada corte!"
+        description="Traga seu amigo para conhecer a barbearia e aproveite descontos em todos os cortes."
+        buttonText="Indicar Amigo"
+        variant="friend"
+      />
+
+    </div>
+  );
+};
