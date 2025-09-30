@@ -48,6 +48,7 @@ const Index = () => {
     { tipo: "Corte Degradê", preco: "R$ 40" },
     { tipo: "Corte Social", preco: "R$ 35" },
     { tipo: "Corte e Barba", preco: "R$ 70" },
+    { tipo: "Barba", preco: "R$ 35" },
     { tipo: "Sobrancelha", preco: "R$ 10" },
   ];
 
