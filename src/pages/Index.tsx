@@ -133,7 +133,7 @@ const Index = () => {
     {planos.map((plano, idx) => (
       <div
         key={idx}
-        className="p-6 rounded-xl shadow-lg bg-card flex flex-col justify-between hover:scale-105 transition-transform"
+        className="p-6 rounded-xl shadow-lg !bg-blck flex flex-col justify-between hover:scale-105 transition-transform"
       >
         <div>
           <h3 className="font-montserrat text-xl font-bold text-white mb-2">
