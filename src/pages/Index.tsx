@@ -5,24 +5,25 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   const promoCards = [
     {
-      title: "Primeira visita? Ganhe R$10 de desconto!",
+      title: "Primeira visita? ganhe 25% de desconto!",
       description: "Venha conhecer a O Barbero e aproveite seu corte de R$40 por apenas R$30.",
       buttonText: "Resgatar agora",
       variant: "first" as const,
     },
     {
-      title: "Trabalha por aqui? Seu corte sai R$10 mais barato!",
+      title: "Se voce trabalha próximo a nossa barbearia, voce tem desconto especial!",
       description: "Apresente seu crachá ou informe seu local de trabalho e pague apenas R$30.",
       buttonText: "Aproveitar",
       variant: "work" as const,
     },
     {
-      title: "Traga um amigo e economize R$5 cada!",
+      title: "Indique um amigo e ganhe 12% de desconto em cada corte!",
       description: "Indique um amigo e ambos pagam apenas R$35 no corte de R$40.",
       buttonText: "Indicar amigo",
       variant: "friend" as const,
     },
-  ];
+];
+
 
   return (
     <div className="min-h-screen bg-background">
