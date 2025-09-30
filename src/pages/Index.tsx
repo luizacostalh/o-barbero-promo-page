@@ -148,9 +148,10 @@ const Index = () => {
             ))}
           </ul>
         </div>
-        <button className="bg-barbero text-white py-2 px-4 rounded-lg w-full font-bold hover:bg-barberoAccent transition-colors">
-          Assinar
-        </button>
+        // Exemplo de hover mais profissional: Amarelo (400) com hover Amarelo Escuro (500)
+<button className="bg-yellow-400 text-black py-2 px-4 rounded-lg w-full font-bold hover:bg-yellow-500 transition-colors">
+  Assinar
+</button>
       </div>
     ))}
   </div>
