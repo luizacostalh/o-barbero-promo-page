@@ -16,7 +16,7 @@ export const Footer = () => {
               <div className="font-open-sans text-muted-foreground">
                 <p>Rua duque de caxias, 552</p>
                 <p>Centro, Dourados - MS</p>
-                <p>CEP: 01234-567</p>
+                <p>CEP: 79831060</p>
               </div>
             </div>
             
