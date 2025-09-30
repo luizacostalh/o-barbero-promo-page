@@ -19,7 +19,7 @@ const Index = () => {
           <span className="bg-yellow-400 text-black px-1 rounded">R$30</span>.
         </>
       ),
-      buttonText: "Resgatar agora",
+      buttonText: "aproveitar",
     },
     {
       title: (
@@ -93,7 +93,7 @@ const Index = () => {
       {/* Valores dos Cortes */}
 <section className="py-12 px-4 bg-white border-t border-border">
   <div className="max-w-6xl mx-auto text-center mb-8">
-    <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-black mb-2">
+    <h2 className="font-montserrat text-3xl md:text-4xl font-bold !text-black mb-2">
       Valores dos Cortes
     </h2>
     <p className="font-open-sans text-lg text-gray-600">
