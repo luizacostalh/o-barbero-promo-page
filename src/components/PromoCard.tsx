@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface PromoCardProps {
-  title: string;
-  description: string;
+  title: React.ReactNode;       // antes: string
+  description: React.ReactNode; // antes: string
   buttonText: string;
   variant?: "first" | "work" | "friend";
 }
