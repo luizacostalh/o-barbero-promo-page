@@ -158,7 +158,7 @@ const Index = () => {
 </section>
 {/* Botão Fixo do WhatsApp */}
 <a 
-  href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" 
+  href="https://wa.me/5567993504221?text=Ol%C3%A1%2C%20estou%20procurando%20uma%20barbearia%20de%20qualidade%20e%20gostaria%20de%20saber%20sobre%20hor%C3%A1rios%20dispon%C3%ADveis.%20Obrigado!" 
   target="_blank" 
   rel="noopener noreferrer" 
   className="fixed bottom-6 right-6 z-50 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
