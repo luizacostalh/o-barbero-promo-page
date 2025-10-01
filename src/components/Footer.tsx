@@ -48,7 +48,7 @@ export const Footer = () => {
                 <Instagram size={24} />
               </a>
               <a 
-                href="SEU_LINK_DO_FACEBOOK_AQUI" // <-- SUBSTITUA ESTA LINHA
+                href="https://www.facebook.com/profile.php?id=61561362364207&locale=pt_BR" // <-- SUBSTITUA ESTA LINHA
                 target="_blank" // Adicionado para abrir em nova aba (boa prática)
                 rel="noopener noreferrer" // Adicionado para segurança (boa prática)
                 className="bg-secondary p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
