@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   // helper: monta o link do WhatsApp
-  const WHATSAPP_NUMERO = "5567993504221";
+  const WHATSAPP_NUMERO ="5567993504221";
 const makeWhatsAppLink = (phone: string, message: string) => {
   const digits = phone.replace(/\D/g, "");
   return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
