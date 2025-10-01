@@ -32,27 +32,31 @@ export const Footer = () => {
           </div>
 
           {/* Redes Sociais */}
-          <div className="space-y-4">
-            <h3 className="font-montserrat text-xl font-bold text-primary mb-4">
-              Redes Sociais
-            </h3>
-            
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="bg-secondary p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-                aria-label="Instagram"
-              >
-                <Instagram size={24} />
-              </a>
-              <a 
-                href="#" 
-                className="bg-secondary p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-                aria-label="Facebook"
-              >
-                <Facebook size={24} />
-              </a>
-            </div>
+          <div className="space-y-4">
+            <h3 className="font-montserrat text-xl font-bold text-primary mb-4">
+              Redes Sociais
+            </h3>
+            
+            <div className="flex gap-4">
+              <a 
+                href="https://www.instagram.com/obarbero21/" // <-- SUBSTITUA ESTA LINHA
+                target="_blank" // Adicionado para abrir em nova aba (boa prática)
+                rel="noopener noreferrer" // Adicionado para segurança (boa prática)
+                className="bg-secondary p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+              <a 
+                href="SEU_LINK_DO_FACEBOOK_AQUI" // <-- SUBSTITUA ESTA LINHA
+                target="_blank" // Adicionado para abrir em nova aba (boa prática)
+                rel="noopener noreferrer" // Adicionado para segurança (boa prática)
+                className="bg-secondary p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} />
+              </a>
+            </div>
             
             <p className="font-open-sans text-sm text-muted-foreground">
               Siga-nos nas redes sociais para ficar por dentro das novidades e promoções exclusivas!
