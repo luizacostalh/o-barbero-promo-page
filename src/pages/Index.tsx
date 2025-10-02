@@ -29,7 +29,7 @@ const Index = () => {
           <span className="bg-yellow-400 text-black px-1 rounded">R$30</span>.
         </>
       ),
-      buttonText: "Resgatar agora",
+      buttonText: "Aproveitar",
       variant: "first" as const,
       whatsappLink: makeWhatsAppLink(
         WHATSAPP_NUMERO,
@@ -60,7 +60,7 @@ const Index = () => {
         </>
       ),
       description: "Indique um amigo e ambos pagam apenas R$35 no corte de R$40.",
-      buttonText: "Indicar amigo",
+      buttonText: "Ganhar Desconto",
       variant: "friend" as const,
       whatsappLink: makeWhatsAppLink(
         WHATSAPP_NUMERO,
