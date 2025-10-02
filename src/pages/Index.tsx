@@ -4,73 +4,72 @@ import { PromoCard } from "@/components/PromoCard";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
-  // helper: monta o link do WhatsApp
-  const WHATSAPP_NUMERO ="5567993504221";
-const makeWhatsAppLink = (phone: string, message: string) => {
-  const digits = phone.replace(/\D/g, "");
-  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
-};
+  // Número da barbearia no formato internacional (55 + DDD + número)
+  const WHATSAPP_NUMERO = "5567993504221";
 
-// Coloque o número da barbearia no formato: 55 + DDD + número
-const numeroLoja = "5567999123456";
+  // Função helper: monta o link do WhatsApp
+  const makeWhatsAppLink = (phone: string, message: string) => {
+    const digits = phone.replace(/\D/g, "");
+    return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+  };
 
-const promoCards = [
-  {
-    title: (
-      <>
-        Primeira visita?{" "}
-        <span className="bg-yellow-400 text-black px-1 rounded">ganhe 25%</span> de desconto!
-      </>
-    ),
-    description: (
-      <>
-        Venha conhecer a O Barbero e aproveite seu corte de{" "}
-        <span className="bg-yellow-400 text-black px-1 rounded">R$40</span> por apenas{" "}
-        <span className="bg-yellow-400 text-black px-1 rounded">R$30</span>.
-      </>
-    ),
-    buttonText: "Resgatar agora",
-    variant: "first" as const,
-    whatsappLink: makeWhatsAppLink(
-      numeroLoja,
-      "Olá! Vim pelo site e quero aproveitar a promoção de primeira visita (ganhe 25%)."
-    ),
-  },
-  {
-    title: (
-      <>
-        Se você trabalha{" "}
-        <span className="bg-yellow-400 text-black px-1 rounded">próximo</span> à nossa barbearia, você tem{" "}
-        <span className="bg-yellow-400 text-black px-1 rounded">desconto</span> especial!
-      </>
-    ),
-    description: "Apresente seu crachá ou informe seu local de trabalho e pague apenas R$30.",
-    buttonText: "Aproveitar",
-    variant: "work" as const,
-    whatsappLink: makeWhatsAppLink(
-      numeroLoja,
-      "Olá! Trabalho próximo e quero aproveitar o desconto especial para trabalhadores."
-    ),
-  },
-  {
-    title: (
-      <>
-        Indique um <span className="bg-yellow-400 text-black px-1 rounded">amigo</span> e{" "}
-        <span className="bg-yellow-400 text-black px-1 rounded">ganhe 12%</span> de desconto em cada corte!
-      </>
-    ),
-    description: "Indique um amigo e ambos pagam apenas R$35 no corte de R$40.",
-    buttonText: "Indicar amigo",
-    variant: "friend" as const,
-    whatsappLink: makeWhatsAppLink(
-      numeroLoja,
-      "Olá! Quero indicar um amigo para aproveitar a promoção de indicação."
-    ),
-  },
-];
+  // Promoções
+  const promoCards = [
+    {
+      title: (
+        <>
+          Primeira visita?{" "}
+          <span className="bg-yellow-400 text-black px-1 rounded">ganhe 25%</span> de desconto!
+        </>
+      ),
+      description: (
+        <>
+          Venha conhecer a O Barbero e aproveite seu corte de{" "}
+          <span className="bg-yellow-400 text-black px-1 rounded">R$40</span> por apenas{" "}
+          <span className="bg-yellow-400 text-black px-1 rounded">R$30</span>.
+        </>
+      ),
+      buttonText: "Resgatar agora",
+      variant: "first" as const,
+      whatsappLink: makeWhatsAppLink(
+        WHATSAPP_NUMERO,
+        "Olá! Vim pelo site e quero aproveitar a promoção de primeira visita (ganhe 25%)."
+      ),
+    },
+    {
+      title: (
+        <>
+          Se você trabalha{" "}
+          <span className="bg-yellow-400 text-black px-1 rounded">próximo</span> à nossa barbearia, você tem{" "}
+          <span className="bg-yellow-400 text-black px-1 rounded">desconto</span> especial!
+        </>
+      ),
+      description: "Apresente seu crachá ou informe seu local de trabalho e pague apenas R$30.",
+      buttonText: "Aproveitar",
+      variant: "work" as const,
+      whatsappLink: makeWhatsAppLink(
+        WHATSAPP_NUMERO,
+        "Olá! Trabalho próximo e quero aproveitar o desconto especial para trabalhadores."
+      ),
+    },
+    {
+      title: (
+        <>
+          Indique um <span className="bg-yellow-400 text-black px-1 rounded">amigo</span> e{" "}
+          <span className="bg-yellow-400 text-black px-1 rounded">ganhe 12%</span> de desconto em cada corte!
+        </>
+      ),
+      description: "Indique um amigo e ambos pagam apenas R$35 no corte de R$40.",
+      buttonText: "Indicar amigo",
+      variant: "friend" as const,
+      whatsappLink: makeWhatsAppLink(
+        WHATSAPP_NUMERO,
+        "Olá! Quero indicar um amigo para aproveitar a promoção de indicação."
+      ),
+    },
+  ];
 
-  // ... O restante do seu código (corteValues, planos, e o JSX de renderização) continua o mesmo.
-
+  // Valores dos cortes
   const corteValues = [
     { tipo: "Corte Degradê", preco: "R$ 40" },
     { tipo: "Corte Social", preco: "R$ 35" },
@@ -79,31 +78,43 @@ const promoCards = [
     { tipo: "Sobrancelha", preco: "R$ 10" },
   ];
 
-  // 2. PLANOS DE ASSINATURA: ADICIONADO whatsappLink
+  // Planos de assinatura (com link do WhatsApp)
   const planos = [
     { 
       nome: "Plano Corte", 
       preco: "R$ 120/mês", 
       beneficios: ["Corte ilimitado durante o mês"], 
-      whatsappLink: `https://wa.me/${WHATSAPP_NUMERO}?text=Tenho%20interesse%20no%20Plano%20Corte%20(R%24120%2Fm%C3%AAs).`
+      whatsappLink: makeWhatsAppLink(
+        WHATSAPP_NUMERO,
+        "Tenho interesse no Plano Corte (R$120/mês)."
+      ),
     },
     { 
       nome: "Plano Corte + Sobrancelha", 
       preco: "R$ 150/mês", 
       beneficios: ["Corte e sobrancelha ilimitados durante o mês"], 
-      whatsappLink: `https://wa.me/${WHATSAPP_NUMERO}?text=Tenho%20interesse%20no%20Plano%20Corte%20%2B%20Sobrancelha%20(R%24150%2Fm%C3%AAs).`
+      whatsappLink: makeWhatsAppLink(
+        WHATSAPP_NUMERO,
+        "Tenho interesse no Plano Corte + Sobrancelha (R$150/mês)."
+      ),
     },
     { 
       nome: "Plano Corte + Barba", 
       preco: "R$ 200/mês", 
       beneficios: ["Corte e barba ilimitados durante o mês"], 
-      whatsappLink: `https://wa.me/${WHATSAPP_NUMERO}?text=Tenho%20interesse%20no%20Plano%20Corte%20%2B%20Barba%20(R%24200%2Fm%C3%AAs).`
+      whatsappLink: makeWhatsAppLink(
+        WHATSAPP_NUMERO,
+        "Tenho interesse no Plano Corte + Barba (R$200/mês)."
+      ),
     },
     { 
       nome: "Plano Completo", 
       preco: "R$ 220/mês", 
       beneficios: ["Corte, barba e sobrancelha ilimitados durante o mês"], 
-      whatsappLink: `https://wa.me/${WHATSAPP_NUMERO}?text=Tenho%20interesse%20no%20Plano%20Completo%20(R%24220%2Fm%C3%AAs).`
+      whatsappLink: makeWhatsAppLink(
+        WHATSAPP_NUMERO,
+        "Tenho interesse no Plano Completo (R$220/mês)."
+      ),
     },
   ];
 
@@ -130,12 +141,10 @@ const promoCards = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {promoCards.map((card, index) => (
-              <div key={index} className="w-full">
-                <PromoCard {...card} />
-              </div>
-            ))}
-          </div>
+  {promoCards.map((card, index) => (
+    <PromoCard key={index} {...card} />
+  ))}
+</div>
         </div>
       </main>
 
@@ -197,8 +206,6 @@ const promoCards = [
                   ))}
                 </ul>
               </div>
-              
-              {/* SUBSTITUIÇÃO FINAL: Botão de Assinar transformado em <a> com link do WhatsApp */}
               <a 
                 href={plano.whatsappLink}
                 target="_blank"
@@ -214,7 +221,10 @@ const promoCards = [
       
       {/* Botão Fixo do WhatsApp */}
       <a 
-        href={`https://wa.me/${WHATSAPP_NUMERO}?text=Ol%C3%A1%2C%20estou%20procurando%20uma%20barbearia%20de%20qualidade%20e%20gostaria%20de%20saber%20sobre%20hor%C3%A1rios%20dispon%C3%ADveis.%20Obrigado!`} 
+        href={makeWhatsAppLink(
+          WHATSAPP_NUMERO,
+          "Olá, estou procurando uma barbearia de qualidade e gostaria de saber sobre horários disponíveis. Obrigado!"
+        )} 
         target="_blank" 
         rel="noopener noreferrer" 
         className="fixed bottom-6 right-6 z-50 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
