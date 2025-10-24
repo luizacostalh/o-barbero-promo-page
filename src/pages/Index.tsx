@@ -76,39 +76,39 @@ const Index = () => {
 
   const planos = [
     { 
-      nome: "Plano Corte", 
-      preco: "R$ 120/mês", 
-      beneficios: ["Corte ilimitado durante o mês"], 
+      nome: "Plano Basico", 
+      preco: "R$ 69,90/mês", 
+      beneficios: ["Corte ou Barba ilimitado durante o mês"], 
       whatsappLink: makeWhatsAppLink(
         WHATSAPP_NUMERO,
-        "Tenho interesse no Plano Corte (R$120/mês)."
+        "Tenho interesse no Plano Basico (R$69,90/mês)."
       ),
     },
     { 
-      nome: "Plano Corte + Sobrancelha", 
-      preco: "R$ 150/mês", 
+      nome: "Plano Prata", 
+      preco: "R$ 89,90/mês", 
       beneficios: ["Corte e sobrancelha ilimitados durante o mês"], 
       whatsappLink: makeWhatsAppLink(
         WHATSAPP_NUMERO,
-        "Tenho interesse no Plano Corte + Sobrancelha (R$150/mês)."
+        "Tenho interesse no Plano Prata (R$89,90/mês)."
       ),
     },
     { 
-      nome: "Plano Corte + Barba", 
-      preco: "R$ 200/mês", 
+      nome: "Plano Ouro", 
+      preco: "R$ 139,90/mês", 
       beneficios: ["Corte e barba ilimitados durante o mês"], 
       whatsappLink: makeWhatsAppLink(
         WHATSAPP_NUMERO,
-        "Tenho interesse no Plano Corte + Barba (R$200/mês)."
+        "Tenho interesse no Plano Ouro (R$139,90/mês)."
       ),
     },
     { 
-      nome: "Plano Completo", 
-      preco: "R$ 220/mês", 
+      nome: "Plano Diamante", 
+      preco: "R$ 159,90/mês", 
       beneficios: ["Corte, barba e sobrancelha ilimitados durante o mês"], 
       whatsappLink: makeWhatsAppLink(
         WHATSAPP_NUMERO,
-        "Tenho interesse no Plano Completo (R$220/mês)."
+        "Tenho interesse no Plano Diamante (R$159,90/mês)."
       ),
     },
   ];
@@ -122,6 +122,65 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+
+      {/* Planos de Assinatura - MOVEI PARA O TOPO */}
+      <section className="py-12 px-4 bg-muted text-foreground border-b border-border">
+        <div className="max-w-6xl mx-auto text-center mb-8">
+          <h2
+            className="font-['Bebas Neue'] text-4xl md:text-5xl text-yellow-400 mb-3 tracking-tight leading-tight drop-shadow-lg"
+          >
+            Assine seu plano e tenha corte ilimitado o mês inteiro
+          </h2>
+          <p className="font-open-sans text-lg text-gray-300">
+            Cuidar do visual ficou fácil — escolha o plano que mais combina com você.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {planos.map((plano, idx) => {
+            const isPopular = plano.nome === "Plano Ouro";
+            return (
+              <div
+                key={idx}
+                className={`relative p-6 rounded-xl shadow-lg flex flex-col justify-between hover:scale-105 transition-transform
+                  ${isPopular ? "bg-gradient-to-b from-yellow-500 to-yellow-700 text-black border-4 border-yellow-400" : "!bg-black text-white"}
+                `}
+              >
+                {isPopular && (
+                  <div className="absolute top-3 right-3 bg-white text-yellow-700 font-bold text-xs px-3 py-1 rounded-full shadow-md uppercase">
+                    ⭐ Mais Popular
+                  </div>
+                )}
+
+                <div>
+                  <h3 className="font-montserrat text-2xl font-extrabold mb-2">
+                    {plano.nome}
+                  </h3>
+                  <p className={`font-open-sans text-lg font-semibold mb-3 ${isPopular ? "text-black" : "text-yellow-400"}`}>
+                    {plano.preco}
+                  </p>
+                  <ul className="font-open-sans text-sm space-y-1 mb-4">
+                    {plano.beneficios.map((b, i) => (
+                      <li key={i}>• {b}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <a
+                  href={plano.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block text-center py-2 px-4 rounded-lg w-full font-bold transition-colors
+                    ${isPopular ? "bg-black text-yellow-400 hover:bg-gray-900" : "bg-yellow-400 text-black hover:bg-yellow-500"}
+                  `}
+                >
+                  Quero esse plano 💈
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
       {/* Promoções */}
       <main className="py-12 px-4">
@@ -166,49 +225,6 @@ const Index = () => {
               <p className="font-open-sans text-xl font-semibold text-white">
                 {corte.preco}
               </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Planos de Assinatura */}
-      <section className="py-12 px-4 bg-muted text-foreground border-t border-border">
-        <div className="max-w-6xl mx-auto text-center mb-8">
-          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-2">
-            Nossos Planos de Assinatura
-          </h2>
-          <p className="font-open-sans text-lg text-muted-foreground">
-            Escolha o plano ideal e tenha acesso a cortes ilimitados durante o mês.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {planos.map((plano, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-xl shadow-lg !bg-black flex flex-col justify-between hover:scale-105 transition-transform"
-            >
-              <div>
-                <h3 className="font-montserrat text-xl font-bold text-white mb-2">
-                  {plano.nome}
-                </h3>
-                <p className="font-open-sans text-lg font-semibold text-primary mb-3">
-                  {plano.preco}
-                </p>
-                <ul className="font-open-sans text-sm text-gray-300 space-y-1 mb-4">
-                  {plano.beneficios.map((b, i) => (
-                    <li key={i}>• {b}</li>
-                  ))}
-                </ul>
-              </div>
-              <a 
-                href={plano.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-yellow-400 text-black py-2 px-4 rounded-lg w-full font-bold hover:bg-yellow-500 transition-colors"
-              >
-                Assinar
-              </a>
             </div>
           ))}
         </div>
