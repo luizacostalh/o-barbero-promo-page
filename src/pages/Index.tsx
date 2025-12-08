@@ -84,16 +84,7 @@ const Index = () => {
         "Tenho interesse no Plano Basico (R$69,90/mês)."
       ),
     },
-    { 
-      nome: "Plano Prata", 
-      preco: "R$ 89,90/mês", 
-      beneficios: ["Corte e sobrancelha ilimitados durante o mês"], 
-      whatsappLink: makeWhatsAppLink(
-        WHATSAPP_NUMERO,
-        "Tenho interesse no Plano Prata (R$89,90/mês)."
-      ),
-    },
-    { 
+        { 
       nome: "Plano Ouro", 
       preco: "R$ 139,90/mês", 
       beneficios: ["Corte e barba ilimitados durante o mês"], 
@@ -102,16 +93,7 @@ const Index = () => {
         "Tenho interesse no Plano Ouro (R$139,90/mês)."
       ),
     },
-    { 
-      nome: "Plano Diamante", 
-      preco: "R$ 159,90/mês", 
-      beneficios: ["Corte, barba e sobrancelha ilimitados durante o mês"], 
-      whatsappLink: makeWhatsAppLink(
-        WHATSAPP_NUMERO,
-        "Tenho interesse no Plano Diamante (R$159,90/mês)."
-      ),
-    },
-  ];
+      ];
 
   useEffect(() => {
     console.log("DEBUG promoCards:", promoCards);
