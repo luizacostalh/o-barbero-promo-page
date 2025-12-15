@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { PromoCard } from "@/components/PromoCard";
 import { Footer } from "@/components/Footer";
+import { FinalYearHighlight } from "@/components/FinalYearHighlight";
+
 
 const Index = () => {
   const WHATSAPP_NUMERO = "5567993504221";
@@ -104,6 +106,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <FinalYearHighlight
+  whatsappLink={makeWhatsAppLink(
+    WHATSAPP_NUMERO,
+    "Olá! Quero garantir meu horário antes do fim do ano."
+  )}
+/>
+
 
       {/* Planos de Assinatura - MOVEI PARA O TOPO */}
 <section id="assinatura" className="py-12 px-4 bg-muted text-foreground border-b border-border">
@@ -183,6 +192,7 @@ const Index = () => {
     </div>
   </div>
 </main>
+
 
 {/* Valores dos Cortes */}
 <section id="valores" className="py-12 px-4 bg-white border-t border-border">
