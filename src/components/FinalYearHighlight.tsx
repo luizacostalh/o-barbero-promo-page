@@ -38,7 +38,7 @@ export const FinalYearHighlight = ({ whatsappLink }: FinalYearHighlightProps) =>
 
             <div className="flex justify-between border-b border-white/10 pb-2">
               <span>
-                📅 30 e 31/12
+                📅 26 a 31/12
                 
               </span>
               <strong className="text-white">Atendimento normal</strong>
