@@ -106,12 +106,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <FinalYearHighlight
+     {/* <FinalYearHighlight
   whatsappLink={makeWhatsAppLink(
     WHATSAPP_NUMERO,
     "Olá! Quero garantir meu horário antes do fim do ano."
-  )}
-/>
+  )} 
+/>*/}
 
 
       {/* Planos de Assinatura - MOVEI PARA O TOPO */}
