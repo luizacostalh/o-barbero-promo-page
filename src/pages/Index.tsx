@@ -115,7 +115,7 @@ const Index = () => {
 
 
       {/* Planos de Assinatura - MOVEI PARA O TOPO */}
-<section id="assinatura" className="py-12 px-4 bg-muted text-foreground border-b border-border">
+<section id="assinatura" className="py-12 px-4 bg-muted text-foreground">
   <div className="max-w-6xl mx-auto text-center mb-8">
     <h2
       className="font-['Bebas Neue'] text-4xl md:text-5xl text-yellow-400 mb-3 tracking-tight leading-tight drop-shadow-lg"

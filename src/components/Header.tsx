@@ -13,7 +13,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="bg-black py-12 px-4 relative">
+    <header className="bg-black py-16 px-4 relative !border-0 !shadow-none !ring-0">
       {/* NAV SUPERIOR DIREITO */}
       <div className="absolute top-4 right-4 flex items-center space-x-4 md:space-x-6">
         {/* MENU DESKTOP */}
@@ -44,7 +44,7 @@ export const Header = () => {
           <img
             src={barberoLogo}
             alt="O Barbero Logo"
-            className="h-40 md:h-52 w-auto mx-auto mb-4 filter drop-shadow-lg"
+            className="h-56 md:h-72 w-auto mx-auto mb-4 filter drop-shadow-lg"
           />
         </div>
         <p className="font-open-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
