@@ -281,14 +281,15 @@ const Index = () => {
       </section>
 
       {/* 📍 Localização */}
-      <section id="localizacao" className="scroll-mt-24 py-12 px-4 bg-brand-light border-t border-border">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-brand-dark mb-4">
-            Cola na O Barbero 💈
-          </h2>
-          <p className="font-open-sans text-lg text-brand-dark mb-6">
-            Estamos pertinho do Shopping Avenida Center, Venha nos visitar!
-          </p>
+       
+  <section id="localizacao" className="scroll-mt-24 py-12 px-4 bg-black">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-teal-400 mb-4">
+      Cola na O Barbero 💈
+    </h2>
+    <p className="font-open-sans text-lg text-gray-300 mb-6">
+      Estamos pertinho do Shopping Avenida Center, Venha nos visitar!
+    </p>
           <div className="w-full h-[450px] rounded-xl overflow-hidden shadow-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.3729272784326!2d-54.80056172576981!3d-22.225925013891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9489a98366d4275b%3A0x79d20b9198b5a591!2zTyDwnZWt8J2WhvCdlpfwnZaH8J2WivCdlpfwnZaUIEJhcmJlYXJpYQ!5e0!3m2!1spt-BR!2sbr!4v1760193621607!5m2!1spt-BR!2sbr"
