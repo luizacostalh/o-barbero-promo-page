@@ -137,57 +137,61 @@ const Index = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {planos.map((plano, idx) => {
-            const isPopular = plano.nome === "Plano Ouro";
-            return (
-              <div
-                key={idx}
-                className={`relative p-6 rounded-xl shadow-lg flex flex-col justify-between hover:scale-105 transition-transform
-                  ${
-                    isPopular
-                      ? "bg-brand-surface text-brand-text border-2 border-teal-500"
-                      : "bg-brand-surface text-brand-text border border-teal-500/20"
-                  }
-                `}
-              >
-                {isPopular && (
-                  <div className="absolute top-3 right-3 bg-teal-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-md uppercase">
-                    ⭐ Mais Popular
-                  </div>
-                )}
+  const isPopular = plano.nome === "Plano Ouro";
+  return (
+    <div
+      key={idx}
+      className={`relative p-6 rounded-xl shadow-lg flex flex-col justify-between hover:scale-[1.02] transition-transform border
+        ${
+          isPopular
+            ? "border-2 border-teal-500"
+            : "border border-teal-500/20"
+        }
+        bg-black/25
+      `}
+    >
+      {/* ✅ sombreado preto suave */}
+      <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-black/35 via-black/15 to-black/45" />
 
-                <div>
-                  <h3 className="font-montserrat text-2xl font-extrabold mb-2">
-                    {plano.nome}
-                  </h3>
+      {isPopular && (
+        <div className="absolute top-3 right-3 bg-teal-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-md uppercase z-10">
+          ⭐ Mais Popular
+        </div>
+      )}
 
-                  <p className="font-open-sans text-lg font-semibold mb-3 text-teal-400">
-                    {plano.preco}
-                  </p>
+      <div className="relative z-10">
+        <h3 className="font-montserrat text-2xl font-extrabold mb-2">
+          {plano.nome}
+        </h3>
 
-                  <ul className="font-open-sans text-sm space-y-1 mb-4">
-                    {plano.beneficios.map((b, i) => (
-                      <li key={i}>• {b}</li>
-                    ))}
-                  </ul>
-                </div>
+        <p className="font-open-sans text-lg font-semibold mb-3 text-teal-400">
+          {plano.preco}
+        </p>
 
-                <a
-                  href={plano.whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block text-center py-2 px-4 rounded-lg w-full font-bold transition-colors
-                    ${
-                      isPopular
-                        ? "bg-teal-500 text-white hover:bg-teal-400"
-                        : "bg-brand-bg text-teal-400 border border-teal-500/40 hover:bg-brand-surface"
-                    }
-                  `}
-                >
-                  Quero esse plano 💈
-                </a>
-              </div>
-            );
-          })}
+        <ul className="font-open-sans text-sm space-y-1 mb-4">
+          {plano.beneficios.map((b, i) => (
+            <li key={i}>• {b}</li>
+          ))}
+        </ul>
+      </div>
+
+      <a
+        href={plano.whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`relative z-10 block text-center py-2 px-4 rounded-lg w-full font-bold transition-colors
+          ${
+            isPopular
+              ? "bg-teal-500 text-white hover:bg-teal-400"
+              : "bg-brand-bg text-teal-400 border border-teal-500/40 hover:bg-brand-surface"
+          }
+        `}
+      >
+        Quero esse plano 💈
+      </a>
+    </div>
+  );
+})}
         </div>
 
         {/* Divisória / seção do carrossel */}
