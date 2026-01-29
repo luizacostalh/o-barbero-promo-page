@@ -16,6 +16,8 @@ import corte7 from "@/assets/cortes/7.jpeg";
 import corte8 from "@/assets/cortes/8.jpeg";
 import corte9 from "@/assets/cortes/9.jpeg";
 import corte10 from "@/assets/cortes/10.jpeg";
+import corte11 from "@/assets/cortes/11.jpeg";
+import corte12 from "@/assets/cortes/12.jpeg";
 
 const Index = () => {
   const WHATSAPP_NUMERO = "5567993504221";
@@ -199,6 +201,9 @@ const Index = () => {
               { src: corte8, alt: "Corte 8" },
               { src: corte9, alt: "Corte 9" },
               { src: corte10, alt: "Corte 10" },
+              { src: corte11, alt: "Corte 11" },
+              { src: corte12, alt: "Corte 12" },
+
             ]}
           />
         </div>
