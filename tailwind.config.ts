@@ -13,11 +13,11 @@ export default {
       },
     },
     extend: {
-  fontFamily: {
-    montserrat: ["Montserrat", "sans-serif"],
-    "open-sans": ["Open Sans", "sans-serif"],
-    playfair: ["Playfair Display", "serif"],
-  },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        "open-sans": ["Open Sans", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
+      },
 
       colors: {
         border: "hsl(var(--border))",
@@ -63,30 +63,44 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+
         // Cores específicas da barbearia
         barbero: {
           dark: "hsl(var(--barbero-dark))",
           graphite: "hsl(var(--barbero-graphite))",
           gold: "hsl(var(--barbero-gold))",
-          'gold-light': "hsl(var(--barbero-gold-light))",
+          "gold-light": "hsl(var(--barbero-gold-light))",
           orange: "hsl(var(--barbero-orange))",
-          'text-light': "hsl(var(--barbero-text-light))",
-          'text-muted': "hsl(var(--barbero-text-muted))",
+          "text-light": "hsl(var(--barbero-text-light))",
+          "text-muted": "hsl(var(--barbero-text-muted))",
+        },
+
+        // Paleta nova (azul petróleo + off-white + cobre)
+        brand: {
+          bg: "#0F172A",      // fundo escuro
+          surface: "#111827", // cards/caixas no escuro
+          text: "#F8FAFC",    // texto em fundo escuro
+          muted: "#CBD5E1",   // texto secundário
+          accent: "#B87333",  // cobre (CTA/destaques)
+          sand: "#E0C097",    // areia (detalhes suaves)
+          light: "#F8FAFC",   // fundo claro
+          dark: "#1E293B",    // texto em fundo claro
         },
       },
+
       backgroundImage: {
-        'gradient-gold': 'var(--gradient-gold)',
-        'gradient-dark': 'var(--gradient-dark)',
-        'gradient-card': 'var(--gradient-card)',
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-dark": "var(--gradient-dark)",
+        "gradient-card": "var(--gradient-card)",
       },
       boxShadow: {
-        'card': 'var(--shadow-card)',
-        'gold': 'var(--shadow-gold)',
-        'button': 'var(--shadow-button)',
+        card: "var(--shadow-card)",
+        gold: "var(--shadow-gold)",
+        button: "var(--shadow-button)",
       },
       transitionTimingFunction: {
-        'smooth': 'var(--transition-smooth)',
-        'bounce': 'var(--transition-bounce)',
+        smooth: "var(--transition-smooth)",
+        bounce: "var(--transition-bounce)",
       },
       borderRadius: {
         lg: "var(--radius)",

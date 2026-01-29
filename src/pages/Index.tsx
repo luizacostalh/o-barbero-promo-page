@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"; 
 import { Header } from "@/components/Header";
 import { PromoCard } from "@/components/PromoCard";
 import { Footer } from "@/components/Footer";
@@ -17,14 +17,14 @@ const Index = () => {
       title: (
         <>
           Primeira visita?{" "}
-          <span className="bg-yellow-400 text-black px-1 rounded">ganhe 25%</span> de desconto!
+          <span className="bg-teal-500 text-white px-1 rounded">ganhe 25%</span> de desconto!
         </>
       ),
       description: (
         <>
           Venha conhecer a O Barbero e aproveite seu corte de{" "}
-          <span className="bg-yellow-400 text-black px-1 rounded">R$40</span> por apenas{" "}
-          <span className="bg-yellow-400 text-black px-1 rounded">R$30</span>.
+          <span className="bg-teal-500 text-white px-1 rounded">R$40</span> por apenas{" "}
+          <span className="bg-teal-500 text-white px-1 rounded">R$30</span>.
         </>
       ),
       buttonText: "Aproveitar",
@@ -38,8 +38,8 @@ const Index = () => {
       title: (
         <>
           Se você trabalha{" "}
-          <span className="bg-yellow-400 text-black px-1 rounded">próximo</span> à nossa barbearia, você tem{" "}
-          <span className="bg-yellow-400 text-black px-1 rounded">desconto</span> especial!
+          <span className="bg-teal-500 text-white px-1 rounded">próximo</span> à nossa barbearia, você tem{" "}
+          <span className="bg-teal-500 text-white px-1 rounded">desconto</span> especial!
         </>
       ),
       description: "Apresente seu crachá ou informe seu local de trabalho e pague apenas R$30.",
@@ -53,8 +53,8 @@ const Index = () => {
     {
       title: (
         <>
-          Indique um <span className="bg-yellow-400 text-black px-1 rounded">amigo</span> e{" "}
-          <span className="bg-yellow-400 text-black px-1 rounded">ganhe 12%</span> de desconto em cada corte!
+          Indique um <span className="bg-teal-500 text-white px-1 rounded">amigo</span> e{" "}
+          <span className="bg-teal-500 text-white px-1 rounded">ganhe 12%</span> de desconto em cada corte!
         </>
       ),
       description: "Indique um amigo e ambos pagam apenas R$35 no corte de R$40.",
@@ -103,7 +103,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-brand-bg text-brand-text pt-36">
       <Header />
       {/* <FinalYearHighlight
   whatsappLink={makeWhatsAppLink(
@@ -113,12 +113,12 @@ const Index = () => {
 />*/}
 
       {/* Planos de Assinatura - MOVEI PARA O TOPO */}
-      <section id="assinatura" className="py-12 px-4 bg-muted text-foreground">
+      <section id="assinatura" className="scroll-mt-24 py-12 px-4 bg-brand-bg text-brand-text">
         <div className="max-w-6xl mx-auto text-center mb-8">
-          <h2 className="font-playfair text-4xl md:text-5xl font-extrabold text-yellow-400 mb-3 tracking-tight leading-tight drop-shadow-lg">
+          <h2 className="font-playfair text-4xl md:text-5xl font-extrabold text-teal-400 mb-3 tracking-tight leading-tight drop-shadow-lg">
             Assine seu plano e tenha corte ilimitado o mês inteiro
           </h2>
-          <p className="font-open-sans text-lg text-gray-300">
+          <p className="font-open-sans text-lg text-brand-muted">
             Cuidar do visual ficou fácil — escolha o plano que mais combina com você.
           </p>
         </div>
@@ -130,11 +130,15 @@ const Index = () => {
               <div
                 key={idx}
                 className={`relative p-6 rounded-xl shadow-lg flex flex-col justify-between hover:scale-105 transition-transform
-            ${isPopular ? "bg-gradient-to-b from-yellow-500 to-yellow-700 text-black border-4 border-yellow-400" : "!bg-black text-white"}
-          `}
+                  ${
+                    isPopular
+                      ? "bg-brand-surface text-brand-text border-2 border-teal-500"
+                      : "bg-brand-surface text-brand-text border border-teal-500/20"
+                  }
+                `}
               >
                 {isPopular && (
-                  <div className="absolute top-3 right-3 bg-white text-yellow-700 font-bold text-xs px-3 py-1 rounded-full shadow-md uppercase">
+                  <div className="absolute top-3 right-3 bg-teal-500 text-white font-bold text-xs px-3 py-1 rounded-full shadow-md uppercase">
                     ⭐ Mais Popular
                   </div>
                 )}
@@ -143,9 +147,11 @@ const Index = () => {
                   <h3 className="font-montserrat text-2xl font-extrabold mb-2">
                     {plano.nome}
                   </h3>
-                  <p className={`font-open-sans text-lg font-semibold mb-3 ${isPopular ? "text-black" : "text-yellow-400"}`}>
+
+                  <p className="font-open-sans text-lg font-semibold mb-3 text-teal-400">
                     {plano.preco}
                   </p>
+
                   <ul className="font-open-sans text-sm space-y-1 mb-4">
                     {plano.beneficios.map((b, i) => (
                       <li key={i}>• {b}</li>
@@ -158,8 +164,12 @@ const Index = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block text-center py-2 px-4 rounded-lg w-full font-bold transition-colors
-              ${isPopular ? "bg-black text-yellow-400 hover:bg-gray-900" : "bg-yellow-400 text-black hover:bg-yellow-500"}
-            `}
+                    ${
+                      isPopular
+                        ? "bg-teal-500 text-white hover:bg-teal-400"
+                        : "bg-brand-bg text-teal-400 border border-teal-500/40 hover:bg-brand-surface"
+                    }
+                  `}
                 >
                   Quero esse plano 💈
                 </a>
@@ -170,13 +180,13 @@ const Index = () => {
       </section>
 
       {/* Promoções */}
-      <main id="promocoes" className="py-12 px-4">
+      <main id="promocoes" className="scroll-mt-24 py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-foreground mb-2">
+            <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-brand-text mb-2">
               Promoções Especiais
             </h2>
-            <p className="font-open-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-open-sans text-lg text-brand-muted max-w-2xl mx-auto">
               Aproveite nossas ofertas exclusivas e venha cuidar do seu visual.
             </p>
           </div>
@@ -190,12 +200,12 @@ const Index = () => {
       </main>
 
       {/* Valores dos Cortes */}
-      <section id="valores" className="py-12 px-4 bg-white border-t border-border">
+      <section id="valores" className="scroll-mt-24 py-12 px-4 bg-brand-light border-t border-border">
         <div className="max-w-6xl mx-auto text-center mb-8">
-          <h2 className="font-montserrat text-3xl md:text-4xl font-bold !text-black mb-2">
+          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-brand-dark mb-2">
             Valores dos Cortes
           </h2>
-          <p className="font-open-sans text-lg text-gray-600">
+          <p className="font-open-sans text-lg text-brand-dark">
             Confira nossos serviços e preços.
           </p>
         </div>
@@ -204,12 +214,12 @@ const Index = () => {
           {corteValues.map((corte, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-xl shadow-lg bg-black text-center hover:scale-105 transition-transform"
+              className="p-6 rounded-xl shadow-lg bg-brand-surface text-center hover:scale-105 transition-transform"
             >
-              <h3 className="font-montserrat text-lg font-bold text-white mb-2">
+              <h3 className="font-montserrat text-lg font-bold text-brand-text mb-2">
                 {corte.tipo}
               </h3>
-              <p className="font-open-sans text-xl font-semibold text-white">
+              <p className="font-open-sans text-xl font-semibold text-brand-text">
                 {corte.preco}
               </p>
             </div>
@@ -218,12 +228,12 @@ const Index = () => {
       </section>
 
       {/* 📍 Localização */}
-      <section id="localizacao" className="py-12 px-4 bg-white border-t border-border">
+      <section id="localizacao" className="scroll-mt-24 py-12 px-4 bg-brand-light border-t border-border">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-brand-dark mb-4">
             Cola na O Barbero 💈
           </h2>
-          <p className="font-open-sans text-lg text-gray-600 mb-6">
+          <p className="font-open-sans text-lg text-brand-dark mb-6">
             Estamos pertinho do Shopping Avenida Center, Venha nos visitar!
           </p>
           <div className="w-full h-[450px] rounded-xl overflow-hidden shadow-lg">
@@ -252,7 +262,7 @@ const Index = () => {
         aria-label="Fale conosco pelo WhatsApp"
       >
         <svg viewBox="0 0 16 16" width="30" height="30" fill="white">
-          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
         </svg>
       </a>
 
