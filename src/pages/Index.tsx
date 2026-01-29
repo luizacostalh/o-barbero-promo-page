@@ -190,6 +190,19 @@ const Index = () => {
           })}
         </div>
 
+        {/* Divisória / seção do carrossel */}
+<div className="px-4">
+  <div className="max-w-6xl mx-auto my-10">
+    <div className="flex items-center gap-4">
+      <span className="h-px flex-1 bg-teal-500/20" />
+      <span className="text-sm font-open-sans text-brand-muted tracking-wide uppercase">
+        Galeria de cortes
+      </span>
+      <span className="h-px flex-1 bg-teal-500/20" />
+    </div>
+  </div>
+</div>
+
         {/* ✅ Carrossel de cortes (abaixo dos planos) */}
         <div className="max-w-6xl mx-auto mt-10">
           <CutCarousel
